@@ -1,0 +1,542 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.INT01.correctness-repeat"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "latencyMeasurement": {
+                    "const": false,
+                    "type": "boolean"
+                  },
+                  "payloadProof": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  },
+                  "repeats": {
+                    "const": 30,
+                    "type": "integer"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "repeats",
+                  "scope",
+                  "payloadProof",
+                  "latencyMeasurement"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.raw.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.raw.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.raw.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-hash.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-hash.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-hash.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.missing-ref.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.missing-ref.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.missing-ref.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "VERIFIED",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-metadata.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-metadata.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.coordinated-metadata.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  },
+                  "rawWithheld": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "scope": {
+                    "const": "MISMATCH",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "rawWithheld"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C2.peer-unavailable"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "payloadProof": {
+                    "const": "UNAVAILABLE",
+                    "type": "string"
+                  },
+                  "peer": {
+                    "const": null,
+                    "type": "null"
+                  },
+                  "raw": {
+                    "const": null,
+                    "type": "null"
+                  },
+                  "scope": {
+                    "const": "UNAVAILABLE",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "scope",
+                  "payloadProof",
+                  "raw",
+                  "peer"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 14,
+      "minItems": 14,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C2"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

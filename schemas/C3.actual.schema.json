@@ -1,0 +1,347 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F01"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 401,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F02"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 401,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F03"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 403,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F04"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 403,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F05"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 403,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F06"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 200,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F07"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 200,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F08"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 200,
+                    "type": "integer"
+                  },
+                  "transport": {
+                    "const": "HTTP",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "status",
+                  "transport",
+                  "protectedLeakage"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.F09"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "raw": {
+                    "const": false,
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "const": 200,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "status",
+                  "raw"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C3"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

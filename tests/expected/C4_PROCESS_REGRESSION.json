@@ -1,0 +1,12 @@
+{
+  "claim": "C4_PROCESS_REGRESSION",
+  "cases": {
+    "C4.separate-process-SIGKILL": {
+      "signal": "SIGKILL",
+      "projectionUnchanged": true,
+      "checkpointUnchanged": true,
+      "downtimeWrites": 0,
+      "includedInCounted36": false
+    }
+  }
+}

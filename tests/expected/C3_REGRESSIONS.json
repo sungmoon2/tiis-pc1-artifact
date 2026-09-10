@@ -1,0 +1,15 @@
+{
+  "claim": "C3_REGRESSIONS",
+  "cases": {
+    "C3.http.audit-failure": {
+      "raw": 503,
+      "integrity": 503,
+      "protectedLeakage": 0,
+      "injection": "APPLICATION_NOT_PHYSICAL_DB_OUTAGE"
+    },
+    "C3.http.revocation": {
+      "revoked": 401,
+      "otherSession": 200
+    }
+  }
+}

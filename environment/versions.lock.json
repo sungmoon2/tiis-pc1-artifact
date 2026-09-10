@@ -1,0 +1,15 @@
+{
+  "architecture": "x86_64",
+  "compose": "5.0.2",
+  "docker": "29.1.5",
+  "guest_memory_profile": "At least 4608 MiB VM; >4 GiB available before start; test containers capped below4 GiB",
+  "host_memory_profile": ">9 GiB available; keep >=5 GiB host reserve; no host service changes",
+  "node": "18.20.8",
+  "node18_scope": "Archived isolated research runtime, not a production/security-maintenance recommendation",
+  "npm": "10.8.2",
+  "os": "Ubuntu 24.04",
+  "python_family": "3.12",
+  "schema": "tiis-environment/v1",
+  "test_network": "isolated internal Docker network; no published application ports",
+  "zstd": "1.5.5"
+}

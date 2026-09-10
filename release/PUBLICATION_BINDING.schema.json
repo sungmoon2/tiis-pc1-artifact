@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "c8_status": {
+      "const": "PENDING_C8_EVIDENCE_RELEASE_READBACK"
+    },
+    "candidate_binding_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "doi": {
+      "pattern": "^10\\.[0-9]{4,9}/[^\\s]+$",
+      "type": "string"
+    },
+    "external_preservation": {
+      "additionalProperties": false,
+      "properties": {
+        "locator": {
+          "pattern": "^https://[^\\s?#@]+$",
+          "type": "string"
+        },
+        "receipt_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "locator",
+        "receipt_sha256"
+      ],
+      "type": "object"
+    },
+    "g4_release_manifest_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "g5_execution": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "public_executor_attestation_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "result_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "target_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "target_manifest_sha256",
+        "evidence_manifest_sha256",
+        "result_sha256",
+        "public_executor_attestation_sha256"
+      ],
+      "type": "object"
+    },
+    "preservation": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "GITHUB_IMMUTABLE_RELEASE"
+        },
+        "locator": {
+          "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/releases/tag/[A-Za-z0-9_.-]+$",
+          "type": "string"
+        },
+        "receipt_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "receipt_sha256"
+      ],
+      "type": "object"
+    },
+    "public_release": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "archive_sha256": {
+                "pattern": "^[a-f0-9]{64}$",
+                "type": "string"
+              },
+              "commit": {
+                "pattern": "^[a-f0-9]{40}$",
+                "type": "string"
+              },
+              "id": {
+                "enum": [
+                  "api",
+                  "web",
+                  "network",
+                  "chaincode"
+                ]
+              },
+              "immutable_tag": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "tree": {
+                "pattern": "^[a-f0-9]{40}$",
+                "type": "string"
+              },
+              "url": {
+                "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:/releases/tag/[A-Za-z0-9_.-]+)?$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "url",
+              "immutable_tag",
+              "commit",
+              "tree",
+              "archive_sha256"
+            ],
+            "type": "object"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "components_lock_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "ga_release_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "immutable_tag": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "umbrella": {
+          "additionalProperties": false,
+          "properties": {
+            "archive_sha256": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "commit": {
+              "pattern": "^[a-f0-9]{40}$",
+              "type": "string"
+            },
+            "tree": {
+              "pattern": "^[a-f0-9]{40}$",
+              "type": "string"
+            },
+            "url": {
+              "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:/releases/tag/[A-Za-z0-9_.-]+)?$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "commit",
+            "tree",
+            "archive_sha256"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "immutable_tag",
+        "components_lock_sha256",
+        "ga_release_manifest_sha256",
+        "umbrella",
+        "components"
+      ],
+      "type": "object"
+    },
+    "schema": {
+      "const": "tiis-publication-binding/v1"
+    },
+    "unauthenticated_readback_receipt_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "candidate_binding_sha256",
+    "g4_release_manifest_sha256",
+    "g5_execution",
+    "public_release",
+    "unauthenticated_readback_receipt_sha256",
+    "preservation",
+    "c8_status"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,77 @@
+{
+  "claim": "C2",
+  "cases": {
+    "C2.INT01.correctness-repeat": {
+      "repeats": 30,
+      "scope": "VERIFIED",
+      "payloadProof": "VERIFIED",
+      "latencyMeasurement": false
+    },
+    "C2.raw.1": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.raw.2": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.raw.3": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-hash.1": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-hash.2": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-hash.3": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.missing-ref.1": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.missing-ref.2": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.missing-ref.3": {
+      "scope": "VERIFIED",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-metadata.1": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-metadata.2": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.coordinated-metadata.3": {
+      "scope": "MISMATCH",
+      "payloadProof": "MISMATCH",
+      "rawWithheld": true
+    },
+    "C2.peer-unavailable": {
+      "scope": "UNAVAILABLE",
+      "payloadProof": "UNAVAILABLE",
+      "raw": null,
+      "peer": null
+    }
+  }
+}

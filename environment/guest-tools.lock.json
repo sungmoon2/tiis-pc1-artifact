@@ -1,0 +1,24 @@
+[
+  {
+    "role": "docker",
+    "url": "https://download.docker.com/linux/static/stable/x86_64/docker-29.1.5.tgz",
+    "filename": "docker-29.1.5.tgz",
+    "bytes": 81996386,
+    "sha256": "882bb03f3fd36ad565b1362f5bbb5d5af5f2410a5c10cae3f9d3d54e2540adc2",
+    "upstream_digest": null,
+    "origin": "OFFICIAL_HTTPS_DOWNLOAD",
+    "redistribution": "REFERENCE_ONLY; binary bytes not included in source or RC bundle",
+    "upstream_terms": "Docker Engine/Compose and embedded components retain their original upstream licenses"
+  },
+  {
+    "role": "compose",
+    "url": "https://github.com/docker/compose/releases/download/v5.0.2/docker-compose-linux-x86_64",
+    "filename": "docker-compose-linux-x86_64",
+    "bytes": 31327024,
+    "sha256": "2d880f723d3da7c779c54fdaea91a842fca8af55d1397f1ed8d7cbab3dd7af67",
+    "upstream_digest": "sha256:2d880f723d3da7c779c54fdaea91a842fca8af55d1397f1ed8d7cbab3dd7af67",
+    "origin": "OFFICIAL_HTTPS_DOWNLOAD",
+    "redistribution": "REFERENCE_ONLY; binary bytes not included in source or RC bundle",
+    "upstream_terms": "Docker Engine/Compose and embedded components retain their original upstream licenses"
+  }
+]

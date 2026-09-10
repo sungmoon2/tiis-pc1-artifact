@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "c8_evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "readback_receipt_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "ref": {
+          "pattern": "^refs/tags/tiis-pc1-c8-v[0-9]+\\.[0-9]+\\.[0-9]+(?:-r[2-9][0-9]*)?$",
+          "type": "string"
+        },
+        "release_url": {
+          "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/releases/tag/[A-Za-z0-9_.-]+$",
+          "type": "string"
+        },
+        "tag_object_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ref",
+        "tag_object_sha256",
+        "release_url",
+        "evidence_manifest_sha256",
+        "readback_receipt_sha256"
+      ],
+      "type": "object"
+    },
+    "ga_target": {
+      "additionalProperties": false,
+      "properties": {
+        "commit": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        },
+        "tree": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "commit",
+        "tree"
+      ],
+      "type": "object"
+    },
+    "publication_binding_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "schema": {
+      "const": "tiis-c8-completion/v1"
+    },
+    "status": {
+      "const": "COMPLETED"
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "publication_binding_sha256",
+    "c8_evidence",
+    "ga_target"
+  ],
+  "type": "object"
+}

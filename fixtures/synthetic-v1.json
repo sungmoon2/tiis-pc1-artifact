@@ -1,0 +1,215 @@
+{
+  "historical_payload_identity": false,
+  "origin": "NEW_FROM_FIRST_PRINCIPLES",
+  "rows": [
+    {
+      "operation": "Yard-1",
+      "payload": {
+        "jobKey": "synthetic-0001",
+        "operation": "Yard-1",
+        "samples": [
+          1,
+          2
+        ]
+      },
+      "round": 1,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-1",
+      "payload": {
+        "jobKey": "synthetic-0002",
+        "operation": "Yard-1",
+        "samples": [
+          2,
+          3
+        ]
+      },
+      "round": 2,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-1",
+      "payload": {
+        "jobKey": "synthetic-0003",
+        "operation": "Yard-1",
+        "samples": [
+          3,
+          4
+        ]
+      },
+      "round": 3,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-2",
+      "payload": {
+        "jobKey": "synthetic-0004",
+        "operation": "Yard-2",
+        "samples": [
+          1,
+          2
+        ]
+      },
+      "round": 1,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-2",
+      "payload": {
+        "jobKey": "synthetic-0005",
+        "operation": "Yard-2",
+        "samples": [
+          2,
+          3
+        ]
+      },
+      "round": 2,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-2",
+      "payload": {
+        "jobKey": "synthetic-0006",
+        "operation": "Yard-2",
+        "samples": [
+          3,
+          4
+        ]
+      },
+      "round": 3,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-3",
+      "payload": {
+        "jobKey": "synthetic-0007",
+        "operation": "Yard-3",
+        "samples": [
+          1,
+          2
+        ]
+      },
+      "round": 1,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-3",
+      "payload": {
+        "jobKey": "synthetic-0008",
+        "operation": "Yard-3",
+        "samples": [
+          2,
+          3
+        ]
+      },
+      "round": 2,
+      "source": "Source A"
+    },
+    {
+      "operation": "Yard-3",
+      "payload": {
+        "jobKey": "synthetic-0009",
+        "operation": "Yard-3",
+        "samples": [
+          3,
+          4
+        ]
+      },
+      "round": 3,
+      "source": "Source A"
+    },
+    {
+      "operation": "Dispatch-1",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0010",
+          "operation": "Dispatch-1"
+        },
+        "samples": [
+          1,
+          2
+        ]
+      },
+      "round": 1,
+      "source": "Source B"
+    },
+    {
+      "operation": "Dispatch-1",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0011",
+          "operation": "Dispatch-1"
+        },
+        "samples": [
+          2,
+          3
+        ]
+      },
+      "round": 2,
+      "source": "Source B"
+    },
+    {
+      "operation": "Dispatch-1",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0012",
+          "operation": "Dispatch-1"
+        },
+        "samples": [
+          3,
+          4
+        ]
+      },
+      "round": 3,
+      "source": "Source B"
+    },
+    {
+      "operation": "Dispatch-2",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0013",
+          "operation": "Dispatch-2"
+        },
+        "samples": [
+          1,
+          2
+        ]
+      },
+      "round": 1,
+      "source": "Source B"
+    },
+    {
+      "operation": "Dispatch-2",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0014",
+          "operation": "Dispatch-2"
+        },
+        "samples": [
+          2,
+          3
+        ]
+      },
+      "round": 2,
+      "source": "Source B"
+    },
+    {
+      "operation": "Dispatch-2",
+      "payload": {
+        "plan": {
+          "key": "synthetic-0015",
+          "operation": "Dispatch-2"
+        },
+        "samples": [
+          3,
+          4
+        ]
+      },
+      "round": 3,
+      "source": "Source B"
+    }
+  ],
+  "schema": "tiis-synthetic-fixtures/v1",
+  "seed": "fixed-enumeration-v1"
+}

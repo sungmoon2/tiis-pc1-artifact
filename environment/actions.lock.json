@@ -1,0 +1,54 @@
+[
+  {
+    "name": "actions/checkout",
+    "commit": "11bd71901bbe5b1630ceea73d27597364c9af683",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/actions/checkout/11bd71901bbe5b1630ceea73d27597364c9af683/LICENSE",
+    "license_sha256": "3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5",
+    "license_bytes": 1097,
+    "retained_text": "third_party/action-3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5.txt",
+    "action_metadata_sha256": "5349b6eea0a1797a9a993c48db9d95b33d27ee1b6227ceced0c9cbf8e655c939",
+    "decision": "REFERENCE_ONLY; upstream action code and its dependency bundle are not redistributed",
+    "execution": "NOT_RUN_EXTERNAL_WRITE_NOT_AUTHORIZED",
+    "scope": "UNEXECUTED_G4_SCAFFOLDING; pinned external reference, no execution claim"
+  },
+  {
+    "name": "actions/upload-artifact",
+    "commit": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/actions/upload-artifact/ea165f8d65b6e75b540449e92b4886f43607fa02/LICENSE",
+    "license_sha256": "3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5",
+    "license_bytes": 1097,
+    "retained_text": "third_party/action-3e855ffa704114a51628ef8f0bf3aeb41728adf9d9070e263bf58aa5640b0eb5.txt",
+    "action_metadata_sha256": "29b21270ff44638a165ea12abb4481796770c629e513217af7b4df1aa3821177",
+    "decision": "REFERENCE_ONLY; upstream action code and its dependency bundle are not redistributed",
+    "execution": "NOT_RUN_EXTERNAL_WRITE_NOT_AUTHORIZED",
+    "scope": "UNEXECUTED_G4_SCAFFOLDING; pinned external reference, no execution claim"
+  },
+  {
+    "name": "actions/github-script",
+    "commit": "ed597411d8f924073f98dfc5c65a23a2325f34cd",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/actions/github-script/ed597411d8f924073f98dfc5c65a23a2325f34cd/LICENSE.md",
+    "license_sha256": "14f02e2212076f3d23828a604c7b495c2862ef960e9899e469c106454c5f1d4f",
+    "license_bytes": 1096,
+    "retained_text": "third_party/action-14f02e2212076f3d23828a604c7b495c2862ef960e9899e469c106454c5f1d4f.txt",
+    "action_metadata_sha256": "2155c7b84863afcfe81a73ab8eafcb2c2f304a995cbe282c31617aa847dff1d8",
+    "decision": "REFERENCE_ONLY; upstream action code and its dependency bundle are not redistributed",
+    "execution": "NOT_RUN_EXTERNAL_WRITE_NOT_AUTHORIZED",
+    "scope": "UNEXECUTED_G4_SCAFFOLDING; pinned external reference, no execution claim"
+  },
+  {
+    "name": "actions/attest-build-provenance",
+    "commit": "977bb373ede98d70efdf65b84cb5f73e068dcc2a",
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/actions/attest-build-provenance/977bb373ede98d70efdf65b84cb5f73e068dcc2a/LICENSE",
+    "license_sha256": "32d0bae2419f014f5066af5915264c966efdb7b6e7fe8f90cf87dc75c5a8d6d0",
+    "license_bytes": 1053,
+    "retained_text": "third_party/action-32d0bae2419f014f5066af5915264c966efdb7b6e7fe8f90cf87dc75c5a8d6d0.txt",
+    "action_metadata_sha256": "70468c90d247618b7ffad979b5b9db08caabb8f0566e6443b29c502c96af15bf",
+    "decision": "REFERENCE_ONLY; upstream action code and its dependency bundle are not redistributed",
+    "execution": "NOT_RUN_EXTERNAL_WRITE_NOT_AUTHORIZED",
+    "scope": "UNEXECUTED_G4_SCAFFOLDING; pinned external reference, no execution claim"
+  }
+]

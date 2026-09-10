@@ -1,0 +1,103 @@
+{
+  "name": "reproduce-c1-c4 — UNEXECUTED_G4_SCAFFOLDING",
+  "on": {
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "reproduce": {
+      "runs-on": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "tiis-ephemeral"
+      ],
+      "environment": "tiis-protected-reproduction",
+      "timeout-minutes": 180,
+      "env": {
+        "EXPECTED_COMMIT": "${{ vars.TIIS_SOURCE_COMMIT }}",
+        "EXPECTED_TREE": "${{ vars.TIIS_SOURCE_TREE }}",
+        "EXPECTED_BUNDLE_SHA256": "${{ vars.TIIS_BUNDLE_SHA256 }}",
+        "EXPECTED_CONTROLLER_REF": "${{ vars.TIIS_CONTROLLER_REF }}",
+        "EXPECTED_WORKFLOW_SHA256": "${{ vars.TIIS_WORKFLOW_FILE_SHA256 }}",
+        "EXPECTED_REPOSITORY": "${{ vars.TIIS_REPOSITORY }}",
+        "EXPECTED_REPOSITORY_ID": "${{ vars.TIIS_REPOSITORY_ID }}",
+        "ACTUAL_CONTROLLER_SHA": "${{ github.workflow_sha }}",
+        "ACTUAL_CONTROLLER_REF": "${{ github.workflow_ref }}"
+      },
+      "steps": [
+        {
+          "name": "Validate immutable controller",
+          "id": "controller",
+          "run": "set -euo pipefail\n[[ \"$EXPECTED_COMMIT\" =~ ^[a-f0-9]{40}$ ]]\n[[ \"$EXPECTED_TREE\" =~ ^[a-f0-9]{40}$ ]]\n[[ \"$EXPECTED_BUNDLE_SHA256\" =~ ^[a-f0-9]{64}$ ]]\n[[ \"$EXPECTED_WORKFLOW_SHA256\" =~ ^[a-f0-9]{64}$ ]]\ntest \"$ACTUAL_CONTROLLER_SHA\" = \"$EXPECTED_COMMIT\"\ntest \"$ACTUAL_CONTROLLER_REF\" = \"$EXPECTED_CONTROLLER_REF\"\ntest \"$GITHUB_SHA\" = \"$EXPECTED_COMMIT\"\ntest \"$GITHUB_REPOSITORY\" = \"$EXPECTED_REPOSITORY\"\ntest \"$GITHUB_REPOSITORY_ID\" = \"$EXPECTED_REPOSITORY_ID\""
+        },
+        {
+          "name": "Checkout exact source",
+          "uses": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "with": {
+            "ref": "${{ vars.TIIS_SOURCE_COMMIT }}",
+            "fetch-depth": 1,
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Validate source and provisioned input",
+          "id": "input",
+          "run": "set -euo pipefail\ntest \"$(git rev-parse HEAD)\" = \"$EXPECTED_COMMIT\"\ntest \"$(git rev-parse 'HEAD^{tree}')\" = \"$EXPECTED_TREE\"\ntest \"$(sha256sum .github/workflows/reproduce-c1-c4.yml | cut -d' ' -f1)\" = \"$EXPECTED_WORKFLOW_SHA256\"\ntest -f \"$TIIS_RC_INPUT_BUNDLE\"\ntest \"$(sha256sum \"$TIIS_RC_INPUT_BUNDLE\" | cut -d' ' -f1)\" = \"$EXPECTED_BUNDLE_SHA256\"\numask 077\nmkdir \"$RUNNER_TEMP/tiis-private\"\nunset GH_TOKEN GITHUB_TOKEN\npython3 artifact doctor >\"$RUNNER_TEMP/tiis-private/doctor.log\" 2>&1\npython3 artifact verify-rc-input-bundle --bundle \"$TIIS_RC_INPUT_BUNDLE\" >\"$RUNNER_TEMP/tiis-private/bundle.log\" 2>&1"
+        },
+        {
+          "name": "Run author reproduction with private command output",
+          "id": "run",
+          "run": "set -euo pipefail\nunset GH_TOKEN GITHUB_TOKEN\npython3 artifact reproduce --bundle \"$TIIS_RC_INPUT_BUNDLE\" --output \"$RUNNER_TEMP/tiis-run\" >\"$RUNNER_TEMP/tiis-private/reproduction.log\" 2>&1",
+          "continue-on-error": true
+        },
+        {
+          "name": "Stage only validated synthetic evidence",
+          "id": "stage",
+          "run": "set -euo pipefail\nunset GH_TOKEN GITHUB_TOKEN\npython3 artifact stage-evidence --input \"$RUNNER_TEMP/tiis-run/evidence\" --publishable-output \"$RUNNER_TEMP/tiis-publishable\" >\"$RUNNER_TEMP/tiis-private/stage.log\" 2>&1",
+          "continue-on-error": true,
+          "if": "always() && steps.input.outcome == 'success'"
+        },
+        {
+          "name": "Upload staged evidence",
+          "if": "always() && steps.stage.outcome == 'success'",
+          "uses": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "with": {
+            "name": "synthetic-evidence",
+            "path": "${{ runner.temp }}/tiis-publishable/",
+            "if-no-files-found": "error",
+            "retention-days": 30
+          }
+        },
+        {
+          "name": "Create non-identifying failure diagnostic",
+          "id": "diagnostic",
+          "if": "always() && steps.stage.outcome != 'success'",
+          "run": "set -euo pipefail\numask 077\nmkdir \"$RUNNER_TEMP/tiis-diagnostic\"\npython3 - <<'PY'\nimport json,os\nfrom pathlib import Path\np=Path(os.environ['RUNNER_TEMP'])/'tiis-diagnostic/DIAGNOSTIC.json'\nwith p.open('x') as f:\n    json.dump({'status':'EVIDENCE_NOT_PUBLISHED'},f)\nPY"
+        },
+        {
+          "name": "Upload minimal diagnostic",
+          "if": "always() && steps.diagnostic.outcome == 'success' && steps.stage.outcome != 'success'",
+          "uses": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "with": {
+            "name": "diagnostic",
+            "path": "${{ runner.temp }}/tiis-diagnostic/DIAGNOSTIC.json",
+            "if-no-files-found": "error",
+            "retention-days": 7
+          }
+        },
+        {
+          "name": "Enforce result",
+          "if": "always()",
+          "env": {
+            "RUN_OUTCOME": "${{ steps.run.outcome }}",
+            "STAGE_OUTCOME": "${{ steps.stage.outcome }}"
+          },
+          "run": "set -euo pipefail\ntest \"$RUN_OUTCOME\" = success\ntest \"$STAGE_OUTCOME\" = success"
+        }
+      ]
+    }
+  }
+}

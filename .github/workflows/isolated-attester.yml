@@ -1,0 +1,25 @@
+{
+  "name": "isolated-attester — UNEXECUTED_G4_SCAFFOLDING",
+  "on": {
+    "workflow_dispatch": {}
+  },
+  "permissions": {},
+  "jobs": {
+    "attest": {
+      "runs-on": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "tiis-ephemeral"
+      ],
+      "environment": "tiis-protected-attestation",
+      "timeout-minutes": 1,
+      "steps": [
+        {
+          "name": "Fail closed pending sanitized subject implementation",
+          "run": "exit 1"
+        }
+      ]
+    }
+  }
+}

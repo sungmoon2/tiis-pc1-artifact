@@ -1,0 +1,964 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.full-sync"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.multi-gap-pagination"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.uncertain-classification"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.validation-metadata"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.0"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.4"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.5"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.6"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.7"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.8"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.gap.9"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.retry-replay.0"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.retry-replay.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.0"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.4"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.5"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.6"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.7"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.8"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.instance-recreation.9"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.0"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.1"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.2"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.3"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.4"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.5"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.6"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.7"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.8"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.finalize-failure.9"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "assertion_status": {
+                    "const": "PASS",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assertion_status"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 36,
+      "minItems": 36,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C4"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

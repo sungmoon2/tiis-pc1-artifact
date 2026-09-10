@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C1.http.authentication-side-effects"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "dbWrites": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "const": 401,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "status",
+                  "dbWrites"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C1.http.valid-submit"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "ledger": {
+                    "const": "COMMITTED",
+                    "type": "string"
+                  },
+                  "status": {
+                    "const": 200,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "status",
+                  "ledger"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C1_HTTP_TRANSPORT"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

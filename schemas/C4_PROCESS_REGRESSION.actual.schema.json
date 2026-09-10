@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C4.separate-process-SIGKILL"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "checkpointUnchanged": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "downtimeWrites": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "includedInCounted36": {
+                    "const": false,
+                    "type": "boolean"
+                  },
+                  "projectionUnchanged": {
+                    "const": true,
+                    "type": "boolean"
+                  },
+                  "signal": {
+                    "const": "SIGKILL",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "signal",
+                  "projectionUnchanged",
+                  "checkpointUnchanged",
+                  "downtimeWrites",
+                  "includedInCounted36"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 1,
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C4_PROCESS_REGRESSION"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

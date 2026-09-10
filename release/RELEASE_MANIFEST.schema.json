@@ -1,0 +1,418 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "API_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "Network_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "SoftwareX_baseline_impact": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "TIIS_claim_link": {
+      "const": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ]
+    },
+    "Web_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "artifact_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "attempt_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "branch": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "candidate_binding_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "chaincode_commit": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "chaincode_name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "chaincode_package_identity": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "chaincode_sequence": {
+      "type": "integer"
+    },
+    "chaincode_version": {
+      "additionalProperties": false,
+      "properties": {
+        "lifecycle_version": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_package_version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_package_version",
+        "lifecycle_version"
+      ],
+      "type": "object"
+    },
+    "claims": {
+      "const": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ]
+    },
+    "components": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "archive_bytes": {
+            "type": "integer"
+          },
+          "archive_sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "full_commit": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          },
+          "logical_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "tree": {
+            "pattern": "^[a-f0-9]{40}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "logical_id",
+          "full_commit",
+          "tree",
+          "archive_sha256",
+          "archive_bytes"
+        ],
+        "type": "object"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array"
+    },
+    "components_lock_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "configuration_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "container_image_digest": {
+      "items": {
+        "pattern": "^sha256:[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "created_utc": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+      "type": "string"
+    },
+    "dirty_status": {
+      "const": "CLEAN"
+    },
+    "evidence_manifest_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "excluded_scope": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expected_result_sha256": {
+      "additionalProperties": false,
+      "properties": {
+        "C1": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "C2": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "C3": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "C4": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "type": "object"
+    },
+    "external": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "type": "integer"
+        },
+        "artifact_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "rc_tag_object": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        },
+        "repository_id": {
+          "type": "integer"
+        },
+        "workflow_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "workflow_sha": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "repository_id",
+        "workflow_sha",
+        "workflow_ref",
+        "rc_tag_object",
+        "artifact_id",
+        "artifact_sha256"
+      ],
+      "type": "object"
+    },
+    "full_commit_sha": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    },
+    "images_lock_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "included_scope": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "license_notice_manifest_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "license_status": {
+      "const": "PASS_SOURCE_SCOPE"
+    },
+    "paper_track": {
+      "const": "TIIS"
+    },
+    "parent_release": {
+      "additionalProperties": false,
+      "properties": {
+        "manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "manifest_sha256"
+      ],
+      "type": "object"
+    },
+    "previous_stage_manifest_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "public_executor_attestation_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "rc_input_bundle": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "type": "integer"
+        },
+        "inner_manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sha256",
+        "bytes",
+        "inner_manifest_sha256"
+      ],
+      "type": "object"
+    },
+    "release_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "release_status": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "repository_role": {
+      "const": "umbrella"
+    },
+    "repository_url_candidate": {
+      "pattern": "^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:/releases/tag/[A-Za-z0-9_.-]+)?$",
+      "type": "string"
+    },
+    "result_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "sbom_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "schema": {
+      "const": "tiis-release-manifest/v1"
+    },
+    "security_scan_receipt_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "sensitive_data_status": {
+      "const": "PASS_SCOPED_SCANS"
+    },
+    "stage": {
+      "enum": [
+        "G2_CANDIDATE",
+        "G3_LOCAL_PASS",
+        "G4_PRIVATE_PASS",
+        "G5_INDEPENDENT_PASS",
+        "G6_PUBLIC_GA"
+      ]
+    },
+    "transfer_receipt_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "umbrella": {
+      "additionalProperties": false,
+      "properties": {
+        "archive_bytes": {
+          "type": "integer"
+        },
+        "archive_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "full_commit": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        },
+        "logical_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tree": {
+          "pattern": "^[a-f0-9]{40}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "logical_id",
+        "full_commit",
+        "tree",
+        "archive_sha256",
+        "archive_bytes"
+      ],
+      "type": "object"
+    },
+    "versions_lock_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "stage",
+    "created_utc",
+    "claims",
+    "candidate_binding_sha256",
+    "components_lock_sha256",
+    "umbrella",
+    "components",
+    "rc_input_bundle",
+    "versions_lock_sha256",
+    "images_lock_sha256",
+    "expected_result_sha256",
+    "license_notice_manifest_sha256",
+    "sbom_sha256",
+    "security_scan_receipt_sha256",
+    "paper_track",
+    "release_id",
+    "release_status",
+    "repository_role",
+    "branch",
+    "full_commit_sha",
+    "dirty_status",
+    "API_commit",
+    "Web_commit",
+    "Network_commit",
+    "chaincode_commit",
+    "chaincode_name",
+    "chaincode_version",
+    "chaincode_sequence",
+    "chaincode_package_identity",
+    "container_image_digest",
+    "configuration_sha256",
+    "artifact_sha256",
+    "included_scope",
+    "excluded_scope",
+    "license_status",
+    "sensitive_data_status",
+    "TIIS_claim_link",
+    "SoftwareX_baseline_impact"
+  ],
+  "type": "object"
+}

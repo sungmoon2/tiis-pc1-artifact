@@ -1,0 +1,49 @@
+{
+  "claim": "C3",
+  "cases": {
+    "C3.http.F01": {
+      "status": 401,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F02": {
+      "status": 401,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F03": {
+      "status": 403,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F04": {
+      "status": 403,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F05": {
+      "status": 403,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F06": {
+      "status": 200,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F07": {
+      "status": 200,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F08": {
+      "status": 200,
+      "transport": "HTTP",
+      "protectedLeakage": 0
+    },
+    "C3.http.F09": {
+      "status": 200,
+      "raw": false
+    }
+  }
+}

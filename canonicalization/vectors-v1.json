@@ -1,0 +1,52 @@
+{
+  "schema": "tiis-literal-kat/v1",
+  "vectors": [
+    {
+      "bytes_hex": "7b223130223a2274656e222c2232223a2274776f222c2261223a317d",
+      "canonical_utf8": "{\"10\":\"ten\",\"2\":\"two\",\"a\":1}",
+      "id": 1,
+      "input": {
+        "10": "ten",
+        "2": "two",
+        "a": 1
+      },
+      "sha256": "38fdb27844a7e4a224666f97c3c626753d824468eb1b347cd652122f47b28829"
+    },
+    {
+      "bytes_hex": "7b2261223a5b5d2c227a223a5b6e756c6c2c7b2261223a66616c73652c2262223a747275657d5d7d",
+      "canonical_utf8": "{\"a\":[],\"z\":[null,{\"a\":false,\"b\":true}]}",
+      "id": 2,
+      "input": {
+        "a": [],
+        "z": [
+          null,
+          {
+            "a": false,
+            "b": true
+          }
+        ]
+      },
+      "sha256": "01a92ffae7759b6b708f2328e284ac5478e162d58d4e2f63dd0a329051d87a6e"
+    },
+    {
+      "bytes_hex": "7b2262223a302c2274657874223a22ed95a9ec84b120f09f9880227d",
+      "canonical_utf8": "{\"b\":0,\"text\":\"\ud569\uc131 \ud83d\ude00\"}",
+      "id": 3,
+      "input": {
+        "b": 0,
+        "text": "\ud569\uc131 \ud83d\ude00"
+      },
+      "sha256": "d694f5c8126a809bdd64eb0e89d1f6f37109001d90f11a6c6c8794bbeb8d94c8"
+    },
+    {
+      "bytes_hex": "7b2261223a312e32352c227a223a307d",
+      "canonical_utf8": "{\"a\":1.25,\"z\":0}",
+      "id": 4,
+      "input": {
+        "a": 1.25,
+        "z": 0
+      },
+      "sha256": "4844732c012c00b3201c77cac82a3677727e5e5ca2987e9879da2dab8c0aed62"
+    }
+  ]
+}

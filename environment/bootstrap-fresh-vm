@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Sungmoon Park
+# SPDX-License-Identifier: Apache-2.0
+"""Install tools only inside a deliberately marked, new disposable VM."""
+import hashlib,json,os,shutil,subprocess,tarfile,time,urllib.request
+from pathlib import Path
+root=Path(__file__).resolve().parent
+assert os.geteuid()==0,'root inside disposable VM required'
+assert Path('/etc/tiis-disposable-vm').read_text().strip()=='tiis-disposable-vm-v1'
+assert subprocess.check_output(['systemd-detect-virt','--vm'],text=True).strip() in ['kvm','qemu']
+assert not shutil.which('docker') and not Path('/var/lib/docker').exists(),'new guest only'
+prefix=Path('/opt/tiis-tools');prefix.mkdir(mode=0o700,exist_ok=False)
+receipts=[]
+def run(argv):
+    p=subprocess.run(argv,capture_output=True,text=True)
+    receipts.append(dict(argv=argv,exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr))
+    (prefix/'BOOTSTRAP_RECEIPTS.json').write_text(json.dumps(receipts,indent=2)+'\n')
+    assert p.returncode==0,'guest prerequisite failure'
+run(['apt-get','update'])
+run(['apt-get','install','-y','--no-install-recommends','zstd','git','openssl','ca-certificates','iptables'])
+lock=json.loads((root/'guest-tools.lock.json').read_text())
+for row in lock:
+    name=row['role']
+    raw=urllib.request.urlopen(row['url'],timeout=120).read()
+    assert len(raw)==row['bytes'] and hashlib.sha256(raw).hexdigest()==row['sha256']
+    target=prefix/name;target.write_bytes(raw)
+    if name=='docker':
+        with tarfile.open(target,'r:gz') as archive:
+            for entry in archive:
+                if entry.isdir():continue
+                assert entry.isfile() and entry.name.startswith('docker/') and len(Path(entry.name).parts)==2
+                output=Path('/usr/local/bin')/Path(entry.name).name
+                assert not output.exists();output.write_bytes(archive.extractfile(entry).read());output.chmod(0o755)
+    elif name=='compose':
+        plugins=Path('/usr/local/lib/docker/cli-plugins');plugins.mkdir(parents=True,exist_ok=True)
+        output=plugins/'docker-compose';assert not output.exists();output.write_bytes(raw);output.chmod(0o755)
+    else:raise ValueError('unknown guest tool')
+with (prefix/'dockerd.log').open('wb') as log:
+    process=subprocess.Popen(['/usr/local/bin/dockerd','--host=unix:///var/run/docker.sock'],stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+(prefix/'DOCKER_PID').write_text(str(process.pid)+'\n')
+for attempt in range(60):
+    p=subprocess.run(['docker','info'],capture_output=True)
+    if p.returncode==0:break
+    time.sleep(1)
+else:raise RuntimeError('new guest Docker did not become ready')
+run(['docker','version']);run(['docker','compose','version'])
+print('PASS: new disposable guest tools only')

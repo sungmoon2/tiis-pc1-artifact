@@ -1,0 +1,124 @@
+{
+  "claim": "C1",
+  "cases": {
+    "C1.valid.Yard-1.1": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-1.2": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-1.3": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-2.1": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-2.2": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-2.3": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-3.1": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-3.2": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Yard-3.3": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-1.1": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-1.2": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-1.3": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-2.1": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-2.2": {
+      "status": "COMMITTED"
+    },
+    "C1.valid.Dispatch-2.3": {
+      "status": "COMMITTED"
+    },
+    "C1.omission.A.key.1": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.A.key.2": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.A.key.3": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.A.operation.1": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.A.operation.2": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.A.operation.3": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.key.1": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.key.2": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.key.3": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.operation.1": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.operation.2": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.omission.B.operation.3": {
+      "dbWrites": 0,
+      "ledgerWrites": 0
+    },
+    "C1.denied.generic-a.Source A": {
+      "ledgerRecordPresent": false,
+      "expectedDenial": "writer attribute"
+    },
+    "C1.denied.wrong-a.Source A": {
+      "ledgerRecordPresent": false,
+      "expectedDenial": "writer enrollment"
+    },
+    "C1.denied.admin-a.Source A": {
+      "ledgerRecordPresent": false,
+      "expectedDenial": "client OU"
+    },
+    "C1.denied.writer-b.Source A": {
+      "ledgerRecordPresent": false,
+      "expectedDenial": "source MSP"
+    },
+    "C1.denied.writer-a.Source B": {
+      "ledgerRecordPresent": false,
+      "expectedDenial": "source MSP"
+    },
+    "C1.direct-allowed.writer-a": {
+      "payloadRowExpected": false
+    },
+    "C1.direct-allowed.writer-b": {
+      "payloadRowExpected": false
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "claim": "C4",
+  "cases": {
+    "C4.full-sync": {
+      "assertion_status": "PASS"
+    },
+    "C4.multi-gap-pagination": {
+      "assertion_status": "PASS"
+    },
+    "C4.uncertain-classification": {
+      "assertion_status": "PASS"
+    },
+    "C4.validation-metadata": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.0": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.1": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.2": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.3": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.4": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.5": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.6": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.7": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.8": {
+      "assertion_status": "PASS"
+    },
+    "C4.gap.9": {
+      "assertion_status": "PASS"
+    },
+    "C4.retry-replay.0": {
+      "assertion_status": "PASS"
+    },
+    "C4.retry-replay.1": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.0": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.1": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.2": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.3": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.4": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.5": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.6": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.7": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.8": {
+      "assertion_status": "PASS"
+    },
+    "C4.instance-recreation.9": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.0": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.1": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.2": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.3": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.4": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.5": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.6": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.7": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.8": {
+      "assertion_status": "PASS"
+    },
+    "C4.finalize-failure.9": {
+      "assertion_status": "PASS"
+    }
+  }
+}

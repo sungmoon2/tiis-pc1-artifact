@@ -1,0 +1,13 @@
+{
+  "claim": "C1_HTTP_TRANSPORT",
+  "cases": {
+    "C1.http.authentication-side-effects": {
+      "status": 401,
+      "dbWrites": 0
+    },
+    "C1.http.valid-submit": {
+      "status": 200,
+      "ledger": "COMMITTED"
+    }
+  }
+}

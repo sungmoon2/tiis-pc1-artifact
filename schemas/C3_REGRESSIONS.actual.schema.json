@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.audit-failure"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "injection": {
+                    "const": "APPLICATION_NOT_PHYSICAL_DB_OUTAGE",
+                    "type": "string"
+                  },
+                  "integrity": {
+                    "const": 503,
+                    "type": "integer"
+                  },
+                  "protectedLeakage": {
+                    "const": 0,
+                    "type": "integer"
+                  },
+                  "raw": {
+                    "const": 503,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "raw",
+                  "integrity",
+                  "protectedLeakage",
+                  "injection"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "const": "C3.http.revocation"
+              },
+              "observed": {
+                "additionalProperties": false,
+                "properties": {
+                  "otherSession": {
+                    "const": 200,
+                    "type": "integer"
+                  },
+                  "revoked": {
+                    "const": 401,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "revoked",
+                  "otherSession"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "id",
+              "observed"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "claim": {
+      "const": "C3_REGRESSIONS"
+    },
+    "provenance": {
+      "const": "NEW_CLEAN_AUTHOR_EXECUTION"
+    }
+  },
+  "required": [
+    "claim",
+    "provenance",
+    "cases"
+  ],
+  "type": "object"
+}

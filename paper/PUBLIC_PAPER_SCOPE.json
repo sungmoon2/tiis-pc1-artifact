@@ -1,0 +1,39 @@
+{
+  "schema": "tiis-public-paper-scope/v1",
+  "artifact_version": "0.1.0",
+  "claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "optional_supporting_claims": [
+    "C5",
+    "C6"
+  ],
+  "C7": "INCOMPLETE",
+  "C8": "PENDING_INDEPENDENT_REPRODUCTION",
+  "data": "SYNTHETIC_ONLY",
+  "logical_organization_aliases": [
+    "Source A",
+    "Source B",
+    "Target T"
+  ],
+  "operations": [
+    "Yard-1",
+    "Yard-2",
+    "Yard-3",
+    "Dispatch-1",
+    "Dispatch-2"
+  ],
+  "historical_C6_scope": "Dispatch-1",
+  "contract_boundary": {
+    "writer": "1.2",
+    "consumer": "1.1"
+  },
+  "historical_PC1_evidence": "NOT_REDISTRIBUTED",
+  "implementation": "NEW_CLEAN_PUBLIC_DERIVATIVE",
+  "author_self_test": "DISTINCT_FROM_HISTORICAL_PC1",
+  "production_suitability_claim": false,
+  "institution_endorsement_claim": false
+}
